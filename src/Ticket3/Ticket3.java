@@ -1,6 +1,12 @@
+/*
+ * Copyright (c) fl_3650.
+ */
+
+package Ticket3;
+
 import java.util.*;
 
-public class Ticket3 {
+class Ticket3 {
     public static boolean isUnique(Map<String, String> map) {
         HashSet<String> uniqueValues = new HashSet<>();
 

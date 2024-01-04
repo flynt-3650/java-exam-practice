@@ -1,6 +1,12 @@
+/*
+ * Copyright (c) fl_3650.
+ */
+
+package Ticket5;
+
 import java.util.*;
 
-public class Ticket5 {
+class Ticket5 {
     private static int count(List<Integer> list, int target) {
         int c = 0;
 

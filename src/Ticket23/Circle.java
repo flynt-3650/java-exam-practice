@@ -1,4 +1,8 @@
+/*
+ * Copyright (c) fl_3650.
+ */
+
 package Ticket23;
 
-public class Circle implements IShape {
+class Circle implements IShape {
 }

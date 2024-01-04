@@ -1,4 +1,8 @@
+/*
+ * Copyright (c) fl_3650.
+ */
+
 package Ticket23;
 
-public class Rectangle implements IShape {
+class Rectangle implements IShape {
 }

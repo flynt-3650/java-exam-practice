@@ -1,6 +1,12 @@
+/*
+ * Copyright (c) fl_3650.
+ */
+
+package Ticket4;
+
 import java.util.*;
 
-public class Ticket4 {
+class Ticket4 {
     public static boolean hasOdd(Set<Integer> set) {
         if (set.isEmpty())
             return false;

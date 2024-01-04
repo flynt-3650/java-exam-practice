@@ -1,6 +1,10 @@
+/*
+ * Copyright (c) fl_3650.
+ */
+
 package Ticket23;
 
-public class ShapeFactory {
+class ShapeFactory {
     public Circle createCircle() {
         return new Circle();
     }

@@ -1,6 +1,12 @@
+/*
+ * Copyright (c) fl_3650.
+ */
+
+package Ticket1;
+
 import java.util.*;
 
-public class Ticket1 {
+class Ticket1 {
     public static ArrayList<Integer> alternate(int[] l1, int[] l2) {
         ArrayList<Integer> result = new ArrayList<>();
         if (l1.length == 0 && l2.length == 0) {

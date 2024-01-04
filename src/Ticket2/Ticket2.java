@@ -1,6 +1,12 @@
+/*
+ * Copyright (c) fl_3650.
+ */
+
+package Ticket2;
+
 import java.util.*;
 
-public class Ticket2 {
+class Ticket2 {
     public static Map<String, Integer> reverse(Map<Integer, String> map) {
         Map<String, Integer> result = new HashMap<>();
 

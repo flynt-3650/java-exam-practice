@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) fl_3650.
+ */
+
 package Ticket18;
 
 class ArrayIntList {
