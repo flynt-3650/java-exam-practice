@@ -2,7 +2,7 @@
  * Copyright (c) fl_3650.
  */
 
-package Ticket1;
+package ticket1;
 
 import java.util.*;
 

@@ -2,7 +2,7 @@
  * Copyright (c) fl_3650.
  */
 
-package Ticket6;
+package ticket6;
 
 class LinkedIntList {
     private ListNode front;

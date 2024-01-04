@@ -2,7 +2,7 @@
  * Copyright (c) fl_3650.
  */
 
-package Ticket18;
+package ticket18;
 
 class ArrayIntList {
     private int[] elementData;

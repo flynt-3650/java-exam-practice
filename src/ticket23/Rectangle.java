@@ -2,7 +2,7 @@
  * Copyright (c) fl_3650.
  */
 
-package Ticket23;
+package ticket23;
 
 class Rectangle implements IShape {
 }

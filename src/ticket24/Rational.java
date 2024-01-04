@@ -2,7 +2,7 @@
  * Copyright (c) fl_3650.
  */
 
-package Ticket24;
+package ticket24;
 
 public class Rational implements MyNumber {
 }
