@@ -1,5 +1,5 @@
 /*
- * Copyright (c) fl_3650.
+ * Copyright (c) Rarmash. https://rarmash.ru
  */
 
 package ticket28;
