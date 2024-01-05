@@ -2,7 +2,7 @@
  * Copyright (c) Rarmash. https://rarmash.ru
  */
 
-package Ticket30;
+package ticket30;
 
 class Ticket30 {
     public static boolean checkPowerOfTwo(int n) {
