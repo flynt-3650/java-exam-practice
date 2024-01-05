@@ -4,5 +4,5 @@
 
 package ticket24;
 
-public class Complex implements MyNumber {
+class Complex implements MyNumber {
 }

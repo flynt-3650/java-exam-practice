@@ -4,5 +4,5 @@
 
 package ticket24;
 
-public interface MyNumber {
+interface MyNumber {
 }

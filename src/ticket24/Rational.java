@@ -4,5 +4,5 @@
 
 package ticket24;
 
-public class Rational implements MyNumber {
+class Rational implements MyNumber {
 }

@@ -6,7 +6,7 @@ package ticket27;
 
 import java.util.Arrays;
 
-public class MyArrayList<T> {
+class MyArrayList<T> {
     private static final int DEFAULT_CAPACITY = 10;
 
     private T[] data;

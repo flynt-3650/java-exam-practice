@@ -4,7 +4,7 @@
 
 package ticket24;
 
-public class Factory {
+class Factory {
     public Complex createComplex() {
         return new Complex();
     }
