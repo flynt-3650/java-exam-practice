@@ -49,7 +49,7 @@ class LinkedInList {
             System.out.print(current.val + " ");
             current = current.next;
         }
-        System.out.println("the end of LinkedList");
+        System.out.println();
     }
     public static void main(String[] args) {
         LinkedInList linkedIntList1 = new LinkedInList();
