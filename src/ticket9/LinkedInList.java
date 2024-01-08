@@ -4,7 +4,6 @@
 
 package ticket9;
 
-
 class LinkedInList {
    ListNode first;
 
