@@ -1,6 +1,6 @@
 package ticket11;
 
-public class ListNode {
+class ListNode {
     int data;
     ListNode next;
 

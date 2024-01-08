@@ -4,7 +4,8 @@
 
 package ticket16;
 import java.util.Stack;
-class StackManipulation {
+
+class Ticket16 {
     public Stack<Integer> copyStack(Stack<Integer> stack) {
         Stack<Integer> stackHelper = new Stack<>();
         Stack<Integer> stackFinal = new Stack<>();
@@ -20,7 +21,7 @@ class StackManipulation {
     }
 
     public static void main(String[] args) {
-        StackManipulation stackManipulation = new StackManipulation();
+        Ticket16 stackManipulation = new Ticket16();
         Stack<Integer> stack = new Stack<>();
         stack.push(1);
         stack.push(2);

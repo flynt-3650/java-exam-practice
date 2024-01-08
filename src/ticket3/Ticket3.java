@@ -8,7 +8,7 @@ import java.util.*;
 
 class Ticket3 {
     public static boolean isUnique(Map<String, String> map) {
-        HashSet<String> uniqueValues = new HashSet<>();
+        Set<String> uniqueValues = new HashSet<>();
 
         for (var value : map.values())
             if (!uniqueValues.add(value))
@@ -18,7 +18,7 @@ class Ticket3 {
     }
 
     public static void main(String[] args) {
-        HashMap<String, String> exampleMap = new HashMap<>();
+        Map<String, String> exampleMap = new HashMap<>();
         exampleMap.put("key1", "value1");
         exampleMap.put("key2", "value2");
         exampleMap.put("key3", "value3");
