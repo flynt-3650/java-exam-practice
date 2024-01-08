@@ -13,7 +13,7 @@ class StackManipulation {
         }
         while (!stackHelper.isEmpty()) {
             int element = stackHelper.pop();
-            stack.push(element); // восстановление изначального стека (не обязательно)
+            stack.push(element);
             stackFinal.push(element);
         }
         return stackFinal;
@@ -27,7 +27,7 @@ class StackManipulation {
         stack.push(3);
         stack.push(4);
         stack.push(5);
-        // Копирование стека
+
         Stack<Integer> copiedStack = stackManipulation.copyStack(stack);
         System.out.println("origin stack");
         for(Integer element: stack) {
@@ -38,7 +38,7 @@ class StackManipulation {
         for(Integer element: copiedStack) {
             System.out.print(element + " ");
         }
-//        System.out.println(stack); так тоже можно печатать
+//        System.out.println(stack); you can print it too
 //        System.out.println(copiedStack);
     }
 
