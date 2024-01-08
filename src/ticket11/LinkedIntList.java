@@ -4,18 +4,15 @@ class LinkedIntList {
     private ListNode front;
 
     public void firstLast() {
-        // Если список пуст или содержит только один элемент, ничего не делаем
         if (front == null || front.next == null) {
             return;
         }
 
-        // Находим последний узел в списке
         ListNode last = front;
         while (last.next != null) {
             last = last.next;
         }
 
-        // Перемещаем первый элемент в конец списка
         last.next = front;
         front = front.next;
         last.next.next = null;
@@ -41,12 +38,12 @@ class LinkedIntList {
         list.front.next.next.next.next.next = new ListNode(5);
         list.front.next.next.next.next.next.next = new ListNode(63);
 
-        System.out.println("Исходный список:");
+        System.out.println("Initial list:");
         list.display();
 
         list.firstLast();
 
-        System.out.println("Список после вызова firstLast:");
+        System.out.println("Result:");
         list.display();
     }
 }
