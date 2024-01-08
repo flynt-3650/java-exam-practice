@@ -28,7 +28,7 @@ class Ticket16 {
         stack.push(3);
         stack.push(4);
         stack.push(5);
-        // Копирование стека
+
         Stack<Integer> copiedStack = stackManipulation.copyStack(stack);
         System.out.println("origin stack");
         for(Integer element: stack) {
@@ -39,7 +39,7 @@ class Ticket16 {
         for(Integer element: copiedStack) {
             System.out.print(element + " ");
         }
-//        System.out.println(stack); так тоже можно печатать
+//        System.out.println(stack); you can print it too
 //        System.out.println(copiedStack);
     }
 
