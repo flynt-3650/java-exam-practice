@@ -6,7 +6,7 @@ package ticket15;
 
 import java.util.*;
 
-public class Ticket15 {
+class Ticket15 {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
         stack.push(3);

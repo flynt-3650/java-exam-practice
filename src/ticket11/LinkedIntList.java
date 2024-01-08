@@ -1,6 +1,6 @@
 package ticket11;
 
-public class LinkedIntList {
+class LinkedIntList {
     private ListNode front;
 
     public void firstLast() {
