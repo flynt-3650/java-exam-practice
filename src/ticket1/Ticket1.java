@@ -9,6 +9,7 @@ import java.util.*;
 class Ticket1 {
     public static List<Integer> alternate(List<Integer> l1, List<Integer> l2) {
         List<Integer> result = new ArrayList<>();
+
         if (l1.isEmpty() && l2.isEmpty()) {
             return result;
         }
