@@ -22,20 +22,11 @@ class Sorter<T extends Number> implements Comparator<T> {
     }
 
     @Override
-    public int compare(T a, T b) throws IllegalArgumentException {
-        if (a.getClass().getName().equals(b.getClass().getName())) {
-            if (a.doubleValue() >  b.doubleValue()) {
-                return 1;
-            } else if (a.equals(b)) {
-                return 0;
-            } else {
-                return -1;
-            }
-        }
-        throw new IllegalArgumentException();
+    public int compare(T a, T b) {
+        return Double.compare(a.doubleValue(), b.doubleValue());
     }
 
-    public  void quickSort(List<T> list, int low, int high) {
+    public void quickSort(List<T> list, int low, int high) {
         if (low < high) {
             int pivotIndex = partition(list, low, high);
             quickSort(list, low, pivotIndex - 1);
