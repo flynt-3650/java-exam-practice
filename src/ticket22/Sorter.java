@@ -44,5 +44,33 @@ class Sorter<T extends Number> implements Comparator<T> {
         return 2;
     }
 
-    // ToDo: add quickSort
+    public  void quickSort(List<T> list, int low, int high) {
+        if (low < high) {
+            int pivotIndex = partition(list, low, high);
+            quickSort(list, low, pivotIndex - 1);
+            quickSort(list, pivotIndex + 1, high);
+        }
+    }
+
+    private int partition(List<T> list , int low, int high) {
+        T pivot = list.get(high);
+        int i = low - 1;
+
+        for (int j = low; j < high; j++) {
+            if (compare(list.get(j),pivot) <= 0) {
+                i++;
+                swap(list, i, j);
+            }
+        }
+
+        swap(list, i + 1, high);
+        return i + 1;
+    }
+
+    private void swap(List<T> list, int i, int j) {
+        var temp = list.get(i);
+        list.set(i, list.get(j));
+        list.set(j, temp);
+
+    }
 }

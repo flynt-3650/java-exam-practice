@@ -16,5 +16,9 @@ public class Main {
 
         for (var item : list)
             System.out.println(item);
+        List<Integer> list1 = new ArrayList<>(Arrays.asList(5, 4, 3, 2, 1));
+        sorter.quickSort(list1, 0, list1.size()-1);
+        for (var item : list1)
+            System.out.println(item);
     }
 }
