@@ -2,6 +2,8 @@
  * Copyright (c) Eliza
  */
 
+// OBSOLETE
+
 package ticket22;
 //interface Sortable<T> {
 //     int comparable(T a, T b);
