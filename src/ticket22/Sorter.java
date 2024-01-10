@@ -22,9 +22,9 @@ class Sorter<T extends Number> implements Comparator<T> {
     }
 
     @Override
-    public int compare(T a, T b) {
-        if (a instanceof Integer && b instanceof Integer) {
-            if ((Integer) a > (Integer) b) {
+    public int compare(T a, T b) throws IllegalArgumentException {
+        if (a.getClass().getName().equals(b.getClass().getName())) {
+            if (a.doubleValue() >  b.doubleValue()) {
                 return 1;
             } else if (a.equals(b)) {
                 return 0;
@@ -32,16 +32,7 @@ class Sorter<T extends Number> implements Comparator<T> {
                 return -1;
             }
         }
-        if (a instanceof Double && b instanceof Double) {
-            if ((Double) a > (Double) b) {
-                return 1;
-            } else if (a.equals(b)) {
-                return 0;
-            } else {
-                return -1;
-            }
-        }
-        return 2;
+        throw new IllegalArgumentException();
     }
 
     public  void quickSort(List<T> list, int low, int high) {
