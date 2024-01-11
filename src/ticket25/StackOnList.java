@@ -11,14 +11,14 @@ public class StackOnList<T> {
 
     public T pop() {
         if (isEmpty()) {
-            throw new IllegalStateException("Стек пуст");
+            throw new IllegalStateException("Empty");
         }
         return list.removeFirst();
     }
 
     public T peek() {
         if (isEmpty()) {
-            throw new IllegalStateException("Стек пуст");
+            throw new IllegalStateException("Empty");
         }
         return list.getFirst();
     }
