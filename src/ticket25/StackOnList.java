@@ -2,7 +2,7 @@ package ticket25;
 
 import java.util.LinkedList;
 
-public class StackOnList<T> {
+class StackOnList<T> {
     private LinkedList<T> list = new LinkedList<>();
 
     public void push(T item) {
