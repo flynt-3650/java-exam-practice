@@ -53,6 +53,5 @@ class Sorter<T extends Number> implements Comparator<T> {
         var temp = list.get(i);
         list.set(i, list.get(j));
         list.set(j, temp);
-
     }
 }
