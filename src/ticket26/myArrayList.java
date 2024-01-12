@@ -4,8 +4,6 @@
 // Напишите реализацию структуры ArrayList на списке
 package ticket26;
 
-import java.util.ArrayList;
-
 
 class myArrayList<T> {
     private static final int DEFAULT_SIZE = 10;
