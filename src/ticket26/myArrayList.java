@@ -33,9 +33,19 @@ class myArrayList<T> {
         }
     }
     private void cloneList(Object[] newList, Object[] oldList) {
-        for (int i = 0; i < size; i++) {
-            newList[i] = oldList[i];
+        if (size >= 0) System.arraycopy(oldList, 0, newList, 0, size);
+    }
+
+    public int index(T element) {
+        if (element == null) {
+            return -1;
+        } else {
+            for (int i = 0; i < size; i++) { // fix the loop condition here
+                if (list[i].equals(element))
+                    return i;
+            }
         }
+        return -1;
     }
 
     public void add(T element) {
@@ -61,11 +71,15 @@ class myArrayList<T> {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }else {
-            for (int i = 0; i < size; size++) {
-                list[index] = list[i+1];
+            for (int i = index; i < size; i++) {
+                list[i] = list[i + 1];
             }
             size--;
         }
+    }
+    public void delеte(T element) {
+        int index = index(element);
+        delеte(index);
     }
     public void print(){
         for(T element : (T[]) list) {

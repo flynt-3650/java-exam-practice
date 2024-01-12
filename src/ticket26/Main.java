@@ -17,5 +17,9 @@ public class Main {
         arrayList.delеte(4);
         System.out.println("\nafter removing: ");
         arrayList.print();
+        arrayList.delеte("in another");
+        System.out.println("\nafter removing: ");
+        arrayList.print();
+
     }
 }
