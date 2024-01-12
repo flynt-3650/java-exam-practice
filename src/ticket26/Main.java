@@ -12,10 +12,10 @@ public class Main {
         arrayList.add("taller");
         arrayList.add("in another");
         arrayList.add("dimension...");
-        System.out.println("before removing");
+        System.out.println("before removing: ");
         arrayList.print();
-        arrayList.delеte(1);
-        System.out.println("after removing");
+        arrayList.delеte(4);
+        System.out.println("\nafter removing: ");
         arrayList.print();
     }
 }

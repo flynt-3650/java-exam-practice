@@ -44,7 +44,7 @@ class myArrayList<T> {
     }
     public void add(int index, T element) {
         //here must be check for overflowing
-        if (index < 0 || index > size) {
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }else {
             ensureSize();
@@ -58,11 +58,11 @@ class myArrayList<T> {
 
     }
     public void delеte(int index) {
-        if (index < 0 || index > size) {
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }else {
             for (int i = 0; i < size; size++) {
-                list[i] = list[i+1];
+                list[index] = list[i+1];
             }
             size--;
         }
