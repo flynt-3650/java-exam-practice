@@ -36,7 +36,7 @@ class myArrayList<T> {
         if (size >= 0) System.arraycopy(oldList, 0, newList, 0, size);
     }
 
-    public int index(T element) {
+    private int index(T element) {
         if (element == null) {
             return -1;
         } else {
