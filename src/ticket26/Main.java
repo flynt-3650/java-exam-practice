@@ -4,7 +4,7 @@
 
 package ticket26;
 
-class Main {
+public class Main {
     public static void main(String[] args) {
         myArrayList<String> arrayList = new myArrayList<>();
         arrayList.add("I'm sure");
@@ -14,10 +14,10 @@ class Main {
         arrayList.add("dimension...");
         System.out.println("before removing: ");
         arrayList.print();
-        arrayList.delite(4);
+        arrayList.delеte(4);
         System.out.println("\nafter removing: ");
         arrayList.print();
-        arrayList.delite("in another");
+        arrayList.delеte("in another");
         System.out.println("\nafter removing: ");
         arrayList.print();
 
