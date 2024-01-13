@@ -65,7 +65,7 @@ class myArrayList<T> {
         }
 
     }
-    public void delеte(int index) {
+    public void delite(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }else {
@@ -75,9 +75,9 @@ class myArrayList<T> {
             size--;
         }
     }
-    public void delеte(T element) {
+    public void delite(T element) {
         int index = index(element);
-        delеte(index);
+        delite(index);
     }
     public void print(){
         for(T element : (T[]) list) {
