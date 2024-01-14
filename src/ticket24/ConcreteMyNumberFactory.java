@@ -4,11 +4,13 @@
 
 package ticket24;
 
-class Factory {
+class ConcreteMyNumberFactory implements IAbstractMyNumberFactory {
+    @Override
     public Complex createComplex() {
         return new Complex();
     }
 
+    @Override
     public Rational createRational() {
         return new Rational();
     }

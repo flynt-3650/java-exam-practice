@@ -11,7 +11,7 @@ class MyArrayList<T> {
     private T[] list;
 
     public MyArrayList(int size) {
-        if(size <= 0) {
+        if (size <= 0) {
             throw new  IllegalArgumentException("size <= 0");
         } else {
             list = (T[]) new Object[size];
@@ -55,10 +55,10 @@ class MyArrayList<T> {
     }
 
     public void add(int index, T element) {
-        //here must be checked for overflowing
+        // here must be checked for overflowing
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
-        }else {
+        } else {
             ensureSize();
             for (int i = size; size > 0; size--) {
                 list[index] = list[i-1];
@@ -73,7 +73,7 @@ class MyArrayList<T> {
     public void delete(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
-        }else {
+        } else {
             for (int i = index; i < size; i++) {
                 list[i] = list[i + 1];
             }
@@ -87,11 +87,9 @@ class MyArrayList<T> {
     }
 
     public void print(){
-        for(T element : list) {
+        for (T element : list) {
             System.out.print(element + " ");
 
         }
     }
-
-
 }
