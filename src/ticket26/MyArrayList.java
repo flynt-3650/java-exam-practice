@@ -2,36 +2,39 @@
  * Copyright (c) Eliza
  */
 // Напишите реализацию структуры ArrayList на списке
+
 package ticket26;
 
-
-class myArrayList<T> {
+class MyArrayList<T> {
     private static final int DEFAULT_SIZE = 10;
     private int size;
-    private  Object[] list;
+    private T[] list;
 
-    public myArrayList(int size) {
+    public MyArrayList(int size) {
         if(size <= 0) {
-
             throw new  IllegalArgumentException("size <= 0");
         } else {
             list = (T[]) new Object[size];
 
         }
     }
-    public myArrayList() {
+
+    public MyArrayList() {
         list = (T[]) new Object[DEFAULT_SIZE];
     }
+
     private void ensureSize() {
         if (size >= list.length) {
             int newSize = size * 2;
             Object[] newList = new Object[newSize];
             cloneList(newList, list);
-            list = newList;
+            list = (T[]) newList;
         }
     }
+
     private void cloneList(Object[] newList, Object[] oldList) {
-        if (size >= 0) System.arraycopy(oldList, 0, newList, 0, size);
+        if (size >= 0)
+            System.arraycopy(oldList, 0, newList, 0, size);
     }
 
     private int index(T element) {
@@ -50,8 +53,9 @@ class myArrayList<T> {
         ensureSize();
         list[size++] = element;
     }
+
     public void add(int index, T element) {
-        //here must be check for overflowing
+        //here must be checked for overflowing
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }else {
@@ -65,7 +69,8 @@ class myArrayList<T> {
         }
 
     }
-    public void delite(int index) {
+
+    public void delete(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }else {
@@ -75,12 +80,14 @@ class myArrayList<T> {
             size--;
         }
     }
-    public void delite(T element) {
+
+    public void delete(T element) {
         int index = index(element);
-        delite(index);
+        delete(index);
     }
+
     public void print(){
-        for(T element : (T[]) list) {
+        for(T element : list) {
             System.out.print(element + " ");
 
         }

@@ -51,6 +51,7 @@ class LinkedInList {
         }
         System.out.println();
     }
+
     public static void main(String[] args) {
         LinkedInList linkedIntList1 = new LinkedInList();
         LinkedInList linkedIntList2 = new LinkedInList();
