@@ -7,8 +7,8 @@
     - Packages: Names should be in lowercase. With small projects that only have a few packages it's okay to just give them simple (but meaningful!) names:
 
         ```java
-        package pokeranalyzer
-        package mycalculator
+        package pokeranalyzer;
+        package mycalculator;
         ```
 
     - Classes: Names should be in PascalCase. Try to use nouns because a class is normally representing something in the real world:
