@@ -32,28 +32,28 @@
         interface IEnumerable {}
         ```
 
-    - Methods: Names should be in mixed case. Use verbs to describe what the method does:
+    - Methods: Names should be in camelCase. Use verbs to describe what the method does:
 
         ```java
         void calculateTax() {}
         String getSurname() {}
         ```
 
-    - Variables: Names should be in mixed case. The names should represent what the value of the variable represents:
+    - Variables: Names should be in camelCase. The names should represent what the value of the variable represents:
 
         ```java
         String firstName;
         int orderNumber;
         ```
 
-    - Only use very short names when the variables are short-lived, such as in for loops:
+    - Only use very short names when the variables are short-lived, such as in `for` loops:
 
         ```java
         for (int i = 0; i < 20; i++) { // 'i' only lives in here
         }
         ```
 
-    - Constants: Names should be in uppercase.
+    - Constants: Names should be in SCREAMING_SNAKE_CASE.
 
         ```java
         final int DEFAULT_WIDTH;
