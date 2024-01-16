@@ -32,11 +32,12 @@ class Ticket29 {
             return element;
         }
 
+        @SuppressWarnings("unchecked")
         public E peek() {
             if (isEmpty()) {
                 throw new EmptyStackException();
             }
-            return (E) array[size - 1]; // TODO: try to fix unchecked cast
+            return (E) array[size - 1];
         }
 
         public boolean isEmpty() {

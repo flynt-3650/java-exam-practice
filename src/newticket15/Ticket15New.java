@@ -2,7 +2,7 @@
  * Copyright (c) Rarmash. https://rarmash.ru
  */
 
-package ticket15new;
+package newticket15;
 
 import java.util.LinkedList;
 import java.util.Queue;
