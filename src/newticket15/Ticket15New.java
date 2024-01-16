@@ -39,7 +39,6 @@ class Ticket15New {
     }
 
     public static void main(String[] args) {
-        // Пример использования
         Queue<Integer> queue = new LinkedList<>();
         queue.offer(1);
         queue.offer(8);
@@ -50,10 +49,10 @@ class Ticket15New {
         queue.offer(12);
         queue.offer(0);
 
-        System.out.println("Исходная очередь: " + queue);
+        System.out.println("Initial Queue: " + queue);
 
         reverseHalf(queue);
 
-        System.out.println("Измененная очередь: " + queue);
+        System.out.println("Altered Queue: " + queue);
     }
 }

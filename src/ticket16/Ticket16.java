@@ -3,6 +3,7 @@
  */
 
 package ticket16;
+
 import java.util.Stack;
 
 class Ticket16 {

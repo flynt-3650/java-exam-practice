@@ -3,6 +3,7 @@
  */
 
 package ticket7;
+
 class LinkedInList {
     private ListNode first;
 

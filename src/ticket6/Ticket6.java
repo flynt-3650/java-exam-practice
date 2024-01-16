@@ -4,6 +4,6 @@
 
 package ticket6;
 
-public class Ticket6 {
+class Ticket6 {
 
 }
