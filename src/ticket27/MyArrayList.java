@@ -12,6 +12,7 @@ class MyArrayList<T> {
     private T[] data;
     private int size;
 
+    @SuppressWarnings("unchecked")
     public MyArrayList() {
         this.data = (T[]) new Object[DEFAULT_CAPACITY];
         this.size = 0;

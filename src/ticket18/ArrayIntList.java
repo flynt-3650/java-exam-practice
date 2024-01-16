@@ -6,8 +6,7 @@ package ticket18;
 
 class ArrayIntList {
     private int[] elementData;
-    private int size;
-
+    
     public void setElementData(int[] elementData) {
         this.elementData = elementData;
     }
