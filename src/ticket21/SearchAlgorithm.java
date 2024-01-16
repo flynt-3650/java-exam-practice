@@ -4,7 +4,6 @@
 
 package ticket21;
 
-// TODO: Do a code review
 class SearchAlgorithm<T extends Comparable<T>> {
     private final T[] array;
 
