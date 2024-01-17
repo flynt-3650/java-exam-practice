@@ -27,6 +27,7 @@ class MyArrayList<T> extends AbstractList<T> {
         }
         return list.set(index, element);
     }
+    
     @Override
     public boolean add(T t) {
         return list.add(t);
