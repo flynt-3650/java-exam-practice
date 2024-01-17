@@ -9,32 +9,38 @@ import java.util.Queue;
 import java.util.Stack;
 
 class Ticket15New {
-    public static void reverseHalf(Queue<Integer> queue) {
-        Queue<Integer> oddQueue = new LinkedList<>();
-        Queue<Integer> evenQueue = new LinkedList<>();
+    public static void reverseHalf(Queue<Integer> queue)
+    {
+        Stack<Integer> stack = new Stack<Integer>();
+        int queueSize = queue.size();
+        int middle = queue.size() >>> 1; // divide by 2
 
-        for (int i = 0; !queue.isEmpty(); i++) {
-            if (i % 2 == 0) {
-                evenQueue.offer(queue.poll());
-            } else {
-                oddQueue.offer(queue.poll());
-            }
+        // first pass, distribution
+        for (int i = 0; i < middle; i++)
+        {
+            queue.add(queue.poll());
+            stack.push(queue.poll());
         }
 
-        // Here we reverse the queue
-        Stack<Integer> stack = new Stack<>();
-        while (!oddQueue.isEmpty()) {
-            stack.push(oddQueue.poll());
+        boolean flag = (queueSize & 1) == 1; // true if the queue length is odd
+
+        if (flag)
+        {
+            queue.add(queue.poll());
         }
 
-        // Filling final queue
-        while (!evenQueue.isEmpty() || !stack.isEmpty()) {
-            if (!evenQueue.isEmpty()) {
-                queue.offer(evenQueue.poll());
-            }
-            if (!stack.isEmpty()) {
-                queue.offer(stack.pop());
-            }
+        // here the queue size is equal to middle (+1 if flag)
+
+        // second pass, merge
+        for (int i = 0; i < middle; i++)
+        {
+            queue.add(queue.poll());
+            queue.add(stack.pop());
+        }
+
+        if (flag)
+        {
+            queue.add(queue.poll());
         }
     }
 
