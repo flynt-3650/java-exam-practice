@@ -23,27 +23,23 @@ class ArrayIntList {
         int currNonIncreasingSeqLength = 1; // current cumulative length of the non-increasing sequence
         int previous = this.elementData[0];
 
-        for (int i = 1; i < arraySize; ++i)
-        {
+        for (int i = 1; i < arraySize; ++i) {
             int current = this.elementData[i];
-            if (current > previous)
-            {
+            if (current > previous) {
                 currNonDecreasingSeqLength++;
 
                 // check if the length of the current sequence does not exceed the length of the previous sequence
                 result = Integer.max(currNonIncreasingSeqLength, result);
                 currNonIncreasingSeqLength = 1;
             }
-            else if (current < previous)
-            {
+            else if (current < previous) {
                 currNonIncreasingSeqLength++;
 
                 // check if the length of the current sequence does not exceed the length of the previous sequence
                 result = Integer.max(currNonDecreasingSeqLength, result);
                 currNonDecreasingSeqLength = 1;
             }
-            else
-            {
+            else {
                 currNonDecreasingSeqLength++;
                 currNonIncreasingSeqLength++;
             }

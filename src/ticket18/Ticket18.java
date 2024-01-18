@@ -20,6 +20,5 @@ class Ticket18 {
         ail.setElementData(new int[]{});
         System.out.println(ail.longestSortedSequence()); // 0 ()
     }
-
 }
 
