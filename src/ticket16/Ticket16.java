@@ -11,7 +11,11 @@ import java.util.Stack;
 class Ticket16 {
     public static Stack<Integer> copyStack(Stack<Integer> stack) {
         Stack<Integer> result = new Stack<Integer>();
-        Queue<Integer> queue = new ArrayDeque<Integer>();
+        int entrySize = stack.size();
+
+        // if we take into account the stack implementation, it will be useful to report the required size
+        result.ensureCapacity(entrySize); // vector method
+        Queue<Integer> queue = new ArrayDeque<Integer>(entrySize);
 
         while (!stack.isEmpty()) {
             queue.add(stack.pop()); // loading in reverse order
