@@ -9,15 +9,13 @@ import java.util.Queue;
 import java.util.Stack;
 
 class Ticket15New {
-    public static void reverseHalf(Queue<Integer> queue)
-    {
-        Stack<Integer> stack = new Stack<Integer>();
+    public static void reverseHalf(Queue<Integer> queue) {
+        Stack<Integer> stack = new Stack<>();
         int queueSize = queue.size();
-        int middle = queue.size() >>> 1; // divide by 2
+        int middle = queue.size() >>> 1; // unsigned divide by 2
 
         // first pass, distribution
-        for (int i = 0; i < middle; i++)
-        {
+        for (int i = 0; i < middle; i++) {
             queue.add(queue.poll());
             stack.push(queue.poll());
         }
@@ -25,23 +23,18 @@ class Ticket15New {
         boolean flag = (queueSize & 1) == 1; // true if the queue length is odd
 
         if (flag)
-        {
             queue.add(queue.poll());
-        }
 
         // here the queue size is equal to middle (+1 if flag)
 
         // second pass, merge
-        for (int i = 0; i < middle; i++)
-        {
+        for (int i = 0; i < middle; i++) {
             queue.add(queue.poll());
             queue.add(stack.pop());
         }
 
         if (flag)
-        {
             queue.add(queue.poll());
-        }
     }
 
     public static void main(String[] args) {

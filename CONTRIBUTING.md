@@ -1,7 +1,7 @@
 # CONTRIBUTING
 
 1. Все классы в пакетах дожны быть default.
-2. Весь текст в файлах должен быть Английским
+2. Весь текст в файлах должен быть Английским.
 3. Придерживайтесь код-стайла Джавы. Выжимка:
 
     - Packages: Names should be in lowercase. With small projects that only have a few packages it's okay to just give them simple (but meaningful!) names:
@@ -14,22 +14,22 @@
     - Classes: Names should be in PascalCase. Try to use nouns because a class is normally representing something in the real world:
 
         ```java
-        class Customer {}
-        class Account {}
+        class House {}
+        class CustomerAccount {}
         ```
 
     - Interfaces: Names should be in PascalCase. They tend to have a name that describes an operation that a class can do:
 
         ```java
         interface Comparable {}
-        interface Enumerable {}
+        interface DataProcessor {}
         ```
 
         Note that some programmers like to distinguish interfaces by beginning the name with an "I":
 
         ```java
         interface IComparable {}
-        interface IEnumerable {}
+        interface IDataProcessor {}
         ```
 
     - Methods: Names should be in camelCase. Use verbs to describe what the method does:
