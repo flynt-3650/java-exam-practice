@@ -4,25 +4,34 @@
 
 package ticket16;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
 import java.util.Stack;
 
 class Ticket16 {
-    public Stack<Integer> copyStack(Stack<Integer> stack) {
-        Stack<Integer> stackHelper = new Stack<>();
-        Stack<Integer> stackFinal = new Stack<>();
-        while(!stack.isEmpty()) {
-            stackHelper.push(stack.pop());
+    public static Stack<Integer> copyStack(Stack<Integer> stack) {
+        Stack<Integer> result = new Stack<Integer>();
+        Queue<Integer> queue = new ArrayDeque<Integer>();
+
+        while (!stack.isEmpty()) {
+            queue.add(stack.pop()); // loading in reverse order
         }
-        while (!stackHelper.isEmpty()) {
-            int element = stackHelper.pop();
-            stack.push(element);
-            stackFinal.push(element);
+        while (!queue.isEmpty()) {
+            stack.push(queue.poll());
         }
-        return stackFinal;
+        while (!stack.isEmpty()) {
+            queue.add(stack.pop()); // loading in direct order
+        }
+        while (!queue.isEmpty()) {
+            // distribution
+            int tmp = queue.poll();
+            stack.push(tmp);
+            result.push(tmp);
+        }
+        return result;
     }
 
     public static void main(String[] args) {
-        Ticket16 stackManipulation = new Ticket16();
         Stack<Integer> stack = new Stack<>();
         stack.push(1);
         stack.push(2);
@@ -30,18 +39,11 @@ class Ticket16 {
         stack.push(4);
         stack.push(5);
 
-        Stack<Integer> copiedStack = stackManipulation.copyStack(stack);
-        System.out.println("origin stack");
-        for(Integer element: stack) {
-            System.out.print(element + " ");
-
-        }
-        System.out.println("\nstack after using copyStack");
-        for(Integer element: copiedStack) {
-            System.out.print(element + " ");
-        }
-//        System.out.println(stack); you can print it too
-//        System.out.println(copiedStack);
+        Stack<Integer> copiedStack = copyStack(stack);
+        System.out.println("Original stack");
+        System.out.println(stack);
+        System.out.println("Stack after using copyStack");
+        System.out.println(copiedStack);
     }
 
 }
