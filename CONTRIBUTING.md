@@ -18,14 +18,7 @@
         class CustomerAccount {}
         ```
 
-    - Interfaces: Names should be in PascalCase. They tend to have a name that describes an operation that a class can do:
-
-        ```java
-        interface Comparable {}
-        interface DataProcessor {}
-        ```
-
-        Note that some programmers like to distinguish interfaces by beginning the name with an "I":
+    - Interfaces: Names should be in PascalCase and start from letter 'I'. They tend to have a name that describes an operation that a class can do:
 
         ```java
         interface IComparable {}
