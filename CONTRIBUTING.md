@@ -42,13 +42,13 @@
     - Only use very short names when the variables are short-lived, such as in `for` loops:
 
         ```java
-        for (int i = 0; i < 20; i++) { // 'i' only lives in here
+        for (int i = 0; i < 20; i++) { // 'i' only lives here
         }
         ```
 
     - Constants: Names should be in SCREAMING_SNAKE_CASE.
 
         ```java
-        final int DEFAULT_WIDTH;
+        static final int DEFAULT_WIDTH;
         static final int MAX_HEIGHT;
         ```

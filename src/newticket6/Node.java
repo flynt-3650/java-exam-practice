@@ -3,20 +3,24 @@
  */
 
 package newticket6;
+
 class Node {
     int val;
     Node left;
     Node right;
+
     public Node(int val) {
         this.val = val;
         this.left = null;
         this.right = null;
     }
 
-    public boolean equals(Node node) {
-        if (node == null) {
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
             return false;
         }
-        return this.val == node.val;
+        final Node otherNode = (Node) obj;
+        return this.val == otherNode.val;
     }
 }
