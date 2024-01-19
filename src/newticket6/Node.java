@@ -2,7 +2,7 @@
  * Copyright (c) Eliza.
  */
 
-package newTicket6;
+package newticket6;
 class Node {
     int val;
     Node left;
