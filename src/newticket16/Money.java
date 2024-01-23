@@ -43,6 +43,6 @@ class Money {
 
     @Override
     public String toString() {
-        return rubles + "," + kopecks + " rub.";
+        return rubles + "," + String.format("%.2f", kopecks);
     }
 }
