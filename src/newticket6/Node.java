@@ -17,7 +17,7 @@ class Node {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == null) {
+        if (obj == null || obj.getClass() != this.getClass()) {
             return false;
         }
         final Node otherNode = (Node) obj;
