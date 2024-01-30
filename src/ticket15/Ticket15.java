@@ -7,40 +7,34 @@ package ticket15;
 import java.util.*;
 
 class Ticket15 {
-    public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-        stack.push(3);
-        stack.push(-5);
-        stack.push(2);
-        stack.push(-8);
-        stack.push(4);
-        stack.push(1);
+    public static Stack<Integer> splitStack(Stack<Integer> s1) {
+        Deque<Integer> deq = new ArrayDeque<>();
+        Stack<Integer> res = new Stack<>();
 
-        splitStack(stack);
-
-        while (!stack.isEmpty()) {
-            System.out.print(stack.pop() + " ");
-        }
-    }
-
-    static void splitStack(Stack<Integer> stack) {
-        Stack<Integer> positiveStack = new Stack<>();
-        Stack<Integer> negativeStack = new Stack<>();
-
-        while (!stack.isEmpty()) {
-            int current = stack.pop();
-            if (current < 0) {
-                negativeStack.push(current);
+        while (!s1.isEmpty()) {
+            if (s1.peek() < 0) {
+                deq.offerFirst(s1.pop());
             } else {
-                positiveStack.push(current);
+                deq.offerLast(s1.pop());
             }
         }
 
-        while (!positiveStack.isEmpty()) {
-            stack.push(positiveStack.pop());
+        while (!deq.isEmpty()) {
+            res.push(deq.poll());
         }
-        while (!negativeStack.isEmpty()) {
-            stack.push(negativeStack.pop());
-        }
+
+        return res;
+    }
+
+    public static void main(String[] args) {
+        Stack<Integer> s1 = new Stack<>();
+
+        s1.push(1);
+        s1.push(-2423423);
+        s1.push(13);
+        s1.push(-115);
+        s1.push(1767);
+
+        System.out.println(splitStack(s1));
     }
 }

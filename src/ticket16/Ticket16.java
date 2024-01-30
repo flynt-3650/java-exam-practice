@@ -4,44 +4,36 @@
 
 package ticket16;
 
-import java.util.Stack;
+import java.util.*;
 
 class Ticket16 {
-    public Stack<Integer> copyStack(Stack<Integer> stack) {
-        Stack<Integer> stackHelper = new Stack<>();
-        Stack<Integer> stackFinal = new Stack<>();
-        while(!stack.isEmpty()) {
-            stackHelper.push(stack.pop());
+    public static Stack<Integer> copyStack(Stack<Integer> s) {
+        Stack<Integer> res = new Stack<>();
+        Deque<Integer> deq = new ArrayDeque<>();
+
+        while (!s.isEmpty()) {
+            deq.offerLast(s.pop());
         }
-        while (!stackHelper.isEmpty()) {
-            int element = stackHelper.pop();
-            stack.push(element);
-            stackFinal.push(element);
+
+        while (!deq.isEmpty()) {
+            Integer item = deq.pollLast();
+            s.push(item);
+            res.push(item);
         }
-        return stackFinal;
+        return res;
     }
 
     public static void main(String[] args) {
-        Ticket16 stackManipulation = new Ticket16();
-        Stack<Integer> stack = new Stack<>();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-        stack.push(5);
+        Stack<Integer> s1 = new Stack<>();
 
-        Stack<Integer> copiedStack = stackManipulation.copyStack(stack);
-        System.out.println("origin stack");
-        for(Integer element: stack) {
-            System.out.print(element + " ");
+        s1.push(1);
+        s1.push(-2423423);
+        s1.push(13);
+        s1.push(-115);
+        s1.push(1767);
+        System.out.println(s1);
 
-        }
-        System.out.println("\nstack after using copyStack");
-        for(Integer element: copiedStack) {
-            System.out.print(element + " ");
-        }
-//        System.out.println(stack); you can print it too
-//        System.out.println(copiedStack);
+        Stack<Integer> newStack = copyStack(s1);
+        System.out.println(newStack);
     }
-
 }

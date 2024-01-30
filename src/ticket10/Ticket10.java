@@ -17,7 +17,6 @@ class Ticket10 {
             if(number < 0){
                 negativeNumbers.push(number);
                 iterator.remove();
-
             } else {
                 positiveNumbers.push(number);
                 iterator.remove();
