@@ -1,40 +1,44 @@
-/*
- * Copyright (c) Eliza
- */
-
 package ticket16;
 
-import java.util.*;
+import java.util.Deque;
+import java.util.ArrayDeque;
+import java.util.Stack;
 
 class Ticket16 {
-    public static Stack<Integer> copyStack(Stack<Integer> s) {
-        Stack<Integer> res = new Stack<>();
-        Deque<Integer> deq = new ArrayDeque<>();
+    public static void reverseHalf(Deque<Integer> queue) {
+        Stack<Integer> stack = new Stack<>();
 
-        while (!s.isEmpty()) {
-            deq.offerLast(s.pop());
+        for (int i = 0; i < queue.size(); i++) {
+            if (i % 2 != 0) stack.push(queue.peek());
+            queue.offer(queue.poll());
         }
 
-        while (!deq.isEmpty()) {
-            Integer item = deq.pollLast();
-            s.push(item);
-            res.push(item);
+        for (int i = 0; i < queue.size(); i++) {
+            if (i % 2 != 0) {
+                queue.poll();
+                queue.offer(stack.pop());
+            } else {
+                queue.offer(queue.poll());
+            }
         }
-
-        return res;
     }
 
     public static void main(String[] args) {
-        Stack<Integer> s1 = new Stack<>();
+        Deque<Integer> queue = new ArrayDeque<>();
+        queue.offer(1);
+        queue.offer(8);
+        queue.offer(7);
+        queue.offer(2);
+        queue.offer(9);
+        queue.offer(18);
+        queue.offer(12);
+        queue.offer(0);
+        queue.offer(5);
 
-        s1.push(1);
-        s1.push(-24);
-        s1.push(13);
-        s1.push(-115);
-        s1.push(1767);
-        System.out.println(s1);
+        System.out.println("Initial Queue: " + queue);
 
-        Stack<Integer> newStack = copyStack(s1);
-        System.out.println(newStack);
+        reverseHalf(queue);
+
+        System.out.println("Altered Queue: " + queue);
     }
 }
