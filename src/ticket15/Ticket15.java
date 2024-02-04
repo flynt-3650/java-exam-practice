@@ -2,14 +2,14 @@
  * Copyright (c) Rarmash. https://rarmash.ru
  */
 
-package newticket15;
+package ticket15;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-class Ticket15New {
+class Ticket15 {
     public static void reverseHalf(Queue<Integer> q) {
         Stack<Integer> stack = new Stack<>();
         int qSize = q.size();
