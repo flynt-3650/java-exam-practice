@@ -40,13 +40,13 @@ class Node {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || this.getClass() != obj.getClass()) return false;
 
-        Node node = (Node) o;
+        Node otherNode = (Node) obj;
 
-        return val == node.val;
+        return val == otherNode.val;
     }
 
     @Override
