@@ -43,7 +43,7 @@ class Ticket1 {
 
     public static void main(String[] args) {
         List<Integer> l1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
-        List<Integer> l2 = new ArrayList<>(Arrays.asList(6, 7, 8, 9, 10));
+        List<Integer> l2 = new LinkedList<>(Arrays.asList(6, 7, 8, 9, 10));
 
         for (var item : alternate(l1, l2))
             System.out.print(item + " ");

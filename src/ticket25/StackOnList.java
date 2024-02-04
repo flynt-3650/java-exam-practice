@@ -3,7 +3,7 @@ package ticket25;
 import java.util.LinkedList;
 
 class StackOnList<T> {
-    private LinkedList<T> list = new LinkedList<>();
+    private final LinkedList<T> list = new LinkedList<>();
 
     public void push(T item) {
         list.addFirst(item);

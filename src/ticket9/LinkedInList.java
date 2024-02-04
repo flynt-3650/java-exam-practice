@@ -5,16 +5,16 @@
 package ticket9;
 
 class LinkedInList {
-   ListNode first;
+   private ListNode first;
 
     public void removeDuplicates() {
         ListNode current = first;
         while (current != null) {
             ListNode prev = current;
-            ListNode helper = current.next;
+            ListNode helper = current.getNext();
 
             while (helper != null) {
-                if (helper.val == current.val) {
+                if (helper.getVal() == current.getVal()) {
                     prev.next = helper.next;
                 } else {
                     prev = helper;
@@ -43,7 +43,7 @@ class LinkedInList {
     public void printList() {
        ListNode current = first;
         while (current != null) {
-            System.out.print(current.val + " ");
+            System.out.print(current.getVal() + " ");
             current = current.next;
         }
         System.out.println();

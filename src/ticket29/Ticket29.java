@@ -9,7 +9,6 @@ import java.util.EmptyStackException;
 class Ticket29 {
     public static class GenericArrayStack<E> {
         private static final int DEFAULT_CAPACITY = 10;
-
         private Object[] array;
         private int size;
 

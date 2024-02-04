@@ -6,7 +6,7 @@ package newticket6;
 
 
 class IntTree {
-    Node root;
+    private final Node root;
     public IntTree(Node root) {
         this.root = root;
     }
@@ -27,21 +27,21 @@ class IntTree {
         // compare the root
         boolean nodeEquals = oneNode.equals(otherNode);
         // compare subtrees
-        boolean leftEquals = equalsHelper(oneNode.left, otherNode.left);
-        boolean rightEquals = equalsHelper(oneNode.right, otherNode.right);
+        boolean leftEquals = equalsHelper(oneNode.getLeft(), otherNode.getLeft());
+        boolean rightEquals = equalsHelper(oneNode.getRight(), otherNode.getRight());
         return nodeEquals && leftEquals && rightEquals;
     }
 
     public static void main(String[] args) {
         Node node1 = new Node(12);
-        node1.left = new Node(1);
-        node1.right = new Node(2);
+        node1.setLeft(new Node(1));
+        node1.setRight(new Node(2));
 
         IntTree tree1 = new IntTree(node1);
 
         Node node2 = new Node(12);
-        node2.left = new Node(1);
-        node2.right = new Node(2);
+        node2.setLeft(new Node(1));
+        node2.setRight(new Node(2));
 
         IntTree tree2 = new IntTree(node2);
 

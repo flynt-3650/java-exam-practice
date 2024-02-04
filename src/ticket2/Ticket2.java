@@ -10,8 +10,8 @@ class Ticket2 {
     public static Map<String, Integer> reverse(Map<Integer, String> map) {
         Map<String, Integer> result = new HashMap<>();
 
-        for (var item : map.keySet()) {
-            result.put(map.get(item), item);
+        for (var item : map.entrySet()) {
+            result.put(item.getValue(), item.getKey());
         }
 
         return result;
@@ -26,8 +26,8 @@ class Ticket2 {
 
         Map<String, Integer> newMap = reverse(hashMap);
 
-        for (var item : newMap.keySet()) {
-            System.out.println(item + " " + newMap.get(item));
+        for (var item : newMap.entrySet()) {
+            System.out.println(item.getKey() + " " + item.getValue());
         }
     }
 }

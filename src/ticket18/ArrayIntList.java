@@ -13,10 +13,7 @@ class ArrayIntList {
 
     public int longestSortedSequence() {
         int arraySize = this.elementData.length;
-        if (arraySize == 0)
-        {
-            return 0;
-        }
+        if (arraySize == 0) return 0;
 
         int result = 1;
         int currNonDecreasingSeqLength = 1; // current accumulated length of the non-decreasing sequence

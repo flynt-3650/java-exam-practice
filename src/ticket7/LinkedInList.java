@@ -13,19 +13,19 @@ class LinkedInList {
         ListNode previous = null;
 
         while (curList1 != null && curList2 != null) {
-            if (curList1.val == curList2.val) {
+            if (curList1.getVal() == curList2.getVal()) {
                 if (previous == null) {
-                    first = curList1.next;
+                    first = curList1.getNext();
                     curList1 = first;
                 } else {
-                    previous.next = curList1.next;
-                    curList1 = curList1.next;
+                    previous.setNext(curList1.getNext());
+                    curList1 = curList1.getNext();
                 }
-            } else if (curList1.val < curList2.val) {
+            } else if (curList1.getVal() < curList2.getVal()) {
                 previous = curList1;
-                curList1 = curList1.next;
+                curList1 = curList1.getNext();
             } else {
-                curList2 = curList2.next;
+                curList2 = curList2.getNext();
             }
         }
     }
@@ -36,10 +36,10 @@ class LinkedInList {
         if (first == null) {
             first = listNode;
         } else {
-            while (last.next != null) {
-                last = last.next;
+            while (last.getNext() != null) {
+                last = last.getNext();
             }
-            last.next = listNode;
+            last.setNext(listNode);
         }
 
     }
@@ -47,8 +47,8 @@ class LinkedInList {
     public void printList() {
         ListNode current = first;
         while (current != null) {
-            System.out.print(current.val + " ");
-            current = current.next;
+            System.out.print(current.getVal() + " ");
+            current = current.getNext();
         }
         System.out.println();
     }

@@ -1,11 +1,9 @@
 package ticket16;
 
-import java.util.Deque;
-import java.util.ArrayDeque;
-import java.util.Stack;
+import java.util.*;
 
 class Ticket16 {
-    public static void reverseHalf(Deque<Integer> queue) {
+    public static void reverseHalf(Queue<Integer> queue) {
         Stack<Integer> stack = new Stack<>();
 
         for (int i = 0; i < queue.size(); i++) {
@@ -24,7 +22,8 @@ class Ticket16 {
     }
 
     public static void main(String[] args) {
-        Deque<Integer> queue = new ArrayDeque<>();
+        Queue<Integer> queue = new LinkedList<>();
+
         queue.offer(1);
         queue.offer(8);
         queue.offer(7);

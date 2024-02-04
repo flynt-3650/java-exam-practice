@@ -4,49 +4,34 @@
 
 package newticket15;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
 class Ticket15New {
-    public static void reverseHalf(Queue<Integer> queue) {
+    public static void reverseHalf(Queue<Integer> q) {
         Stack<Integer> stack = new Stack<>();
-        int queueSize = queue.size();
-        int middle = queue.size() >>> 1; // unsigned divide by 2
+        int qSize = q.size();
 
-        // first pass, distribution
-        for (int i = 0; i < middle; i++) {
-            queue.add(queue.poll());
-            stack.push(queue.poll());
+        for (int i = 0; i < qSize; i++) {
+            if (i % 2 != 0) stack.push(q.peek());
+
+            q.offer(q.poll());
         }
 
-        boolean flag = (queueSize & 1) == 1; // true if the queue length is odd
-
-        if (flag)
-            queue.add(queue.poll());
-
-        // here the queue size is equal to middle (+1 if flag)
-
-        // second pass, merge
-        for (int i = 0; i < middle; i++) {
-            queue.add(queue.poll());
-            queue.add(stack.pop());
+        for (int i = 0; i < qSize; i++) {
+            if (i % 2 != 0) {
+                q.poll();
+                q.offer(stack.pop());
+            } else {
+                q.offer(q.poll());
+            }
         }
-
-        if (flag)
-            queue.add(queue.poll());
     }
 
     public static void main(String[] args) {
-        Queue<Integer> queue = new LinkedList<>();
-        queue.offer(1);
-        queue.offer(8);
-        queue.offer(7);
-        queue.offer(2);
-        queue.offer(9);
-        queue.offer(18);
-        queue.offer(12);
-        queue.offer(0);
+        Queue<Integer> queue = new LinkedList<>(Arrays.asList(1, 8, 7, 2, 9, 18, 12, 0));
 
         System.out.println("Initial Queue: " + queue);
 
