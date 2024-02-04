@@ -41,7 +41,7 @@ class SearchAlgorithm<T extends Comparable<T>> {
     }
 
     public static void main(String[] args) {
-        Integer[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Integer[] intArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         SearchAlgorithm<Integer> intSearch = new SearchAlgorithm<>(intArray);
 
         int key = 6; // index

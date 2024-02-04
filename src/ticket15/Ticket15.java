@@ -15,7 +15,8 @@ class Ticket15 {
         int qSize = q.size();
 
         for (int i = 0; i < qSize; i++) {
-            if (i % 2 != 0) stack.push(q.peek());
+            if (i % 2 != 0)
+                stack.push(q.peek());
 
             q.offer(q.poll());
         }

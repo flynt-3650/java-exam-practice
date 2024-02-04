@@ -6,14 +6,15 @@ package ticket18;
 
 class ArrayIntList {
     private int[] elementData;
-    
+
     public void setElementData(int[] elementData) {
         this.elementData = elementData;
     }
 
     public int longestSortedSequence() {
         int arraySize = this.elementData.length;
-        if (arraySize == 0) return 0;
+        if (arraySize == 0)
+            return 0;
 
         int result = 1;
         int currNonDecreasingSeqLength = 1; // current accumulated length of the non-decreasing sequence
@@ -25,18 +26,18 @@ class ArrayIntList {
             if (current > previous) {
                 currNonDecreasingSeqLength++;
 
-                // check if the length of the current sequence does not exceed the length of the previous sequence
+                // check if the length of the current sequence does not exceed the length of the
+                // previous sequence
                 result = Integer.max(currNonIncreasingSeqLength, result);
                 currNonIncreasingSeqLength = 1;
-            }
-            else if (current < previous) {
+            } else if (current < previous) {
                 currNonIncreasingSeqLength++;
 
-                // check if the length of the current sequence does not exceed the length of the previous sequence
+                // check if the length of the current sequence does not exceed the length of the
+                // previous sequence
                 result = Integer.max(currNonDecreasingSeqLength, result);
                 currNonDecreasingSeqLength = 1;
-            }
-            else {
+            } else {
                 currNonDecreasingSeqLength++;
                 currNonIncreasingSeqLength++;
             }

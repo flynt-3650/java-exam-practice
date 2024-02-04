@@ -34,12 +34,12 @@ class Sorter<T extends Number> implements Comparator<T> {
         }
     }
 
-    private int partition(List<T> list , int low, int high) {
+    private int partition(List<T> list, int low, int high) {
         T pivot = list.get(high);
         int i = low - 1;
 
         for (int j = low; j < high; j++) {
-            if (compare(list.get(j),pivot) <= 0) {
+            if (compare(list.get(j), pivot) <= 0) {
                 i++;
                 swap(list, i, j);
             }

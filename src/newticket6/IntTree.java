@@ -4,9 +4,9 @@
 
 package newticket6;
 
-
 class IntTree {
     private final Node root;
+
     public IntTree(Node root) {
         this.root = root;
     }
@@ -16,9 +16,11 @@ class IntTree {
     }
 
     public boolean equalsHelper(Node oneNode, Node otherNode) {
-        if (oneNode == null && otherNode == null) return true;
+        if (oneNode == null && otherNode == null)
+            return true;
 
-        if (oneNode == null || otherNode == null) return false;
+        if (oneNode == null || otherNode == null)
+            return false;
 
         // compare the root
         boolean nodeEquals = oneNode.equals(otherNode);

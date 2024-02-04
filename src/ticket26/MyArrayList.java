@@ -16,6 +16,7 @@ class MyArrayList<T> extends AbstractList<T> {
         }
         return list.get(index);
     }
+
     @Override
     public int size() {
         return list.size();
@@ -27,18 +28,17 @@ class MyArrayList<T> extends AbstractList<T> {
         }
         return list.set(index, element);
     }
-    
+
     @Override
     public boolean add(T t) {
         return list.add(t);
     }
 
-
     public void delete(int index) {
         if (index < 0 || index >= list.size()) {
             throw new IndexOutOfBoundsException();
         }
-         list.remove(index);
+        list.remove(index);
     }
 
     public void print() {

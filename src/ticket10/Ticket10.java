@@ -8,22 +8,22 @@ import java.util.*;
 
 class Ticket15 {
     public static Stack<Integer> splitStack(Stack<Integer> s1) {
-    LinkedList<Integer> list = new LinkedList<>();
-    Stack<Integer> res = new Stack<>();
+        LinkedList<Integer> list = new LinkedList<>();
+        Stack<Integer> res = new Stack<>();
 
-    while (!s1.isEmpty()) {
-        if (s1.peek() < 0) {
-            list.addFirst(s1.pop());
-        } else {
-            list.addLast(s1.pop());
+        while (!s1.isEmpty()) {
+            if (s1.peek() < 0) {
+                list.addFirst(s1.pop());
+            } else {
+                list.addLast(s1.pop());
+            }
         }
-    }
 
-    while (!list.isEmpty()) {
-        res.push(list.removeFirst());
-    }
+        while (!list.isEmpty()) {
+            res.push(list.removeFirst());
+        }
 
-    return res;
+        return res;
     }
 
     public static void main(String[] args) {

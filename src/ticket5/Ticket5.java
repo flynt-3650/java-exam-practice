@@ -18,7 +18,8 @@ class Ticket5 {
     }
 
     public static int rarest(Map<String, Integer> map) throws Exception {
-        if (map.isEmpty()) throw new Exception("Empty");
+        if (map.isEmpty())
+            throw new Exception("Empty");
 
         List<Integer> list = new ArrayList<>(map.values());
 

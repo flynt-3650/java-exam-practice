@@ -8,10 +8,12 @@ import java.util.*;
 
 class Ticket4 {
     public static boolean hasOdd(Set<Integer> set) {
-        if (set.isEmpty()) return false;
+        if (set.isEmpty())
+            return false;
 
         for (var item : set)
-            if (item % 2 != 0) return true;
+            if (item % 2 != 0)
+                return true;
 
         return false;
     }

@@ -8,7 +8,8 @@ import java.util.*;
 
 class Ticket14 {
     static boolean equals(Stack<Integer> stack1, Stack<Integer> stack2) {
-        if (stack1.size() != stack2.size()) return false;
+        if (stack1.size() != stack2.size())
+            return false;
 
         Stack<Integer> helper = new Stack<>();
 

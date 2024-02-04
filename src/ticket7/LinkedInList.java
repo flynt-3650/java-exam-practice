@@ -69,6 +69,5 @@ class LinkedInList {
         linkedIntList1.removeAll(linkedIntList2);
         linkedIntList1.printList();
 
-
     }
 }

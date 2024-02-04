@@ -7,7 +7,8 @@ class Ticket16 {
         Stack<Integer> stack = new Stack<>();
 
         for (int i = 0; i < queue.size(); i++) {
-            if (i % 2 != 0) stack.push(queue.peek());
+            if (i % 2 != 0)
+                stack.push(queue.peek());
             queue.offer(queue.poll());
         }
 
